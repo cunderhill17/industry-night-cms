@@ -21,7 +21,7 @@ class StudentPortfolioController extends Controller
     }
 
     //3. Create a student portfolio entry
-    public function create(Request $request)
+    public function store(Request $request)
     {
         $validated = $request->validate([
             'student_name' => 'required|string',
