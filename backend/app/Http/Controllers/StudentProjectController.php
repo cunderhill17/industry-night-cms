@@ -26,7 +26,7 @@ class StudentProjectController extends Controller
             'title'         => 'required|string',
             'description'   => 'required|string',
             'course'        => 'required|string',
-            'archived'      => 'nullable|booleann',
+            'archived'      => 'nullable|boolean',
         ]);
 
         return StudentProject::create($validated);
@@ -39,7 +39,7 @@ class StudentProjectController extends Controller
             'title'         => 'required|string',
             'description'   => 'required|string',
             'course'        => 'required|string',
-            'archived'      => 'nullable|booleann',
+            'archived'      => 'nullable|boolean',
         ]);
 
         return $studentProject->update($validated);
