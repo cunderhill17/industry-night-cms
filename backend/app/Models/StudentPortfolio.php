@@ -12,4 +12,9 @@ class StudentPortfolio extends Model
         'student_image',
         'archived'
     ];
+
+    public function portfolioRoles()
+    {
+        return $this->hasMany(PortfolioRole::class);
+    }
 }
