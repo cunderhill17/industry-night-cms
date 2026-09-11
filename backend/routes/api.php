@@ -3,6 +3,7 @@
 use App\Http\Controllers\PortfolioRoleController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentPortfolioController;
+use App\Http\Controllers\StudentProjectController;
 
 //Student Portfolio Routes
 
@@ -23,4 +24,16 @@ Route::post('/studentPortfolios/{studentPortfolio}/portfolioRoles', [PortfolioRo
 
 Route::scopeBindings()->group(function() {
     Route::delete('/studentPortfolios/{studentPortfolio}/portfolioRoles/{portfolioRole}', [PortfolioRoleController::class, 'destroy']);
+});
+
+
+//Student Project Routes
+
+Route::get('/studentProjects', [StudentProjectController::class, 'index']);
+Route::post('/studentProjects', [StudentProjectController::class, 'store']);
+
+Route::scopeBindings()->group(function () {
+    Route::get('/studentProjects/{studentProject}', [StudentProjectController::class, 'show']);
+    Route::put('/studentProjects/{studentProject}', [StudentProjectController::class, 'update']);
+    Route::delete('/studentProjects/{studentProject}', [StudentProjectController::class, 'destroy']);
 });
