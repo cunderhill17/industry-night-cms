@@ -12,4 +12,9 @@ class StudentProject extends Model
         'course',
         'archived'
     ];
+
+    public function studentProjectExamples()
+    {
+        return $this->hasMany(StudentProjectExample::class);
+    }
 }
