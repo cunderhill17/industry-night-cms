@@ -73,4 +73,10 @@ class StudentPortfolioController extends Controller
 
         return response()->json(['message' => 'Student Portfolio Entry Deleted']);
     }
+
+    //6. Return Student Portfolio's using Pagination
+    public function portfolioPaginate()
+    {
+        return StudentPortfolio::with('portfolioRoles')->paginate(10);
+    }
 }

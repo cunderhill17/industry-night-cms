@@ -47,3 +47,7 @@ Route::post('/studentProjects/{studentProject}/studentProjectExamples', [Student
 Route::scopeBindings()->group(function () {
     Route::delete('/studentProjects/{studentProject}/studentProjectExamples/{studentProjectExample}', [StudentProjectExampleController::class, 'destroy']);
 });
+
+
+//Student Portfolios Pagination
+Route::get('/paginate/studentPortfolios', [StudentPortfolioController::class, 'portfolioPaginate']);
