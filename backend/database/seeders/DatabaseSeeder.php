@@ -24,7 +24,8 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             StudentPortfolioSeeder::class,
-            PortfolioRoleSeeder::class
+            PortfolioRoleSeeder::class,
+            StudentProjectSeeder::class
         ]);
     }
 }
