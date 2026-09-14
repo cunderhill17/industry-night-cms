@@ -54,5 +54,7 @@ Route::get('/paginate/studentPortfolios', [StudentPortfolioController::class, 'p
 
 //Archive Routes
 Route::put('/studentPortfolios/{studentPortfolio}/archive', [StudentPortfolioController::class, 'archive']);
+Route::put('/studentPortfolios/{studentPortfolio}/unarchive', [StudentPortfolioController::class, 'unarchive']);
 
 Route::put('/studentProjects/{studentProject}/archive', [StudentProjectController::class, 'archive']);
+Route::put('/studentProjects/{studentProject}/unarchive', [StudentProjectController::class, 'unarchive']);

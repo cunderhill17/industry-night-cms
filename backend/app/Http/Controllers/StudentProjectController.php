@@ -59,4 +59,12 @@ class StudentProjectController extends Controller
         return $studentProject->update(['archived' => true]);
     }
 
+    //7. Unarchive Student Portfolio 
+    public function unarchive(StudentProject $studentProject)
+    {
+        return $studentProject->update(['archived' => false]);
+    }
+
+    
+
 }

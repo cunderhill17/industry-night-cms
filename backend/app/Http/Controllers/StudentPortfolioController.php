@@ -85,4 +85,10 @@ class StudentPortfolioController extends Controller
     {
         return $studentPortfolio->update(['archived' => true]);
     }
+
+    //8. Unarchive Student Portfolio 
+    public function unarchive(StudentPortfolio $studentPortfolio)
+    {
+        return $studentPortfolio->update(['archived' => false]);
+    }
 }
