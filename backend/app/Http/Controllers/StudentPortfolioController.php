@@ -79,4 +79,10 @@ class StudentPortfolioController extends Controller
     {
         return StudentPortfolio::with('portfolioRoles')->paginate(10);
     }
+
+    //7. Archive Student Portfolio 
+    public function archive(StudentPortfolio $studentPortfolio)
+    {
+        return $studentPortfolio->update(['archived' => true]);
+    }
 }
