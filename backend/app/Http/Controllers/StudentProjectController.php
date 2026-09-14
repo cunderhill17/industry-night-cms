@@ -53,4 +53,10 @@ class StudentProjectController extends Controller
         return response()->json(['message' => 'The student project has been deleted']);
     }
 
+    //6. Archive Student Portfolio 
+    public function archive(StudentProject $studentProject)
+    {
+        return $studentProject->update(['archived' => true]);
+    }
+
 }
