@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PortfolioRoleController;
+use App\Http\Controllers\PublicApiController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentPortfolioController;
 use App\Http\Controllers\StudentProjectController;
@@ -58,3 +59,6 @@ Route::put('/studentPortfolios/{studentPortfolio}/unarchive', [StudentPortfolioC
 
 Route::put('/studentProjects/{studentProject}/archive', [StudentProjectController::class, 'archive']);
 Route::put('/studentProjects/{studentProject}/unarchive', [StudentProjectController::class, 'unarchive']);
+
+//Filtering 
+Route::get('/studentPortfolios/filter/{roleString}', [PublicApiController::class, 'filterPortfolio']);
