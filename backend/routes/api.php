@@ -51,3 +51,10 @@ Route::scopeBindings()->group(function () {
 
 //Student Portfolios Pagination
 Route::get('/paginate/studentPortfolios', [StudentPortfolioController::class, 'portfolioPaginate']);
+
+//Archive Routes
+Route::put('/studentPortfolios/{studentPortfolio}/archive', [StudentPortfolioController::class, 'archive']);
+Route::put('/studentPortfolios/{studentPortfolio}/unarchive', [StudentPortfolioController::class, 'unarchive']);
+
+Route::put('/studentProjects/{studentProject}/archive', [StudentProjectController::class, 'archive']);
+Route::put('/studentProjects/{studentProject}/unarchive', [StudentProjectController::class, 'unarchive']);
