@@ -19,4 +19,10 @@ class PublicApiController extends Controller
         })->with('portfolioRoles')
             ->where(['archived' => false])->get();
     }
+
+    //6. Return Student Portfolio's using Pagination
+    public function portfolioPaginate()
+    {
+        return StudentPortfolio::with('portfolioRoles')->paginate(10);
+    }
 }

@@ -74,19 +74,13 @@ class StudentPortfolioController extends Controller
         return response()->json(['message' => 'Student Portfolio Entry Deleted']);
     }
 
-    //6. Return Student Portfolio's using Pagination
-    public function portfolioPaginate()
-    {
-        return StudentPortfolio::with('portfolioRoles')->paginate(10);
-    }
-
-    //7. Archive Student Portfolio 
+    //6. Archive Student Portfolio 
     public function archive(StudentPortfolio $studentPortfolio)
     {
         return $studentPortfolio->update(['archived' => true]);
     }
 
-    //8. Unarchive Student Portfolio 
+    //7. Unarchive Student Portfolio 
     public function unarchive(StudentPortfolio $studentPortfolio)
     {
         return $studentPortfolio->update(['archived' => false]);
