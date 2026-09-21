@@ -7,51 +7,52 @@ use App\Http\Controllers\StudentPortfolioController;
 use App\Http\Controllers\StudentProjectController;
 use App\Http\Controllers\StudentProjectExampleController;
 
-//Student Portfolio Routes
+/* ---Student Portfolio Roles--- */
 
 Route::get('/student-portfolios', [StudentPortfolioController::class, 'index']);
 Route::post('/student-portfolios', [StudentPortfolioController::class, 'store']);
 
-Route::scopeBindings()->group(function () {
-    Route::get('/student-portfolios/{studentPortfolio}', [StudentPortfolioController::class, 'show']);
-    Route::put('/student-portfolios/{studentPortfolio}', [StudentPortfolioController::class, 'update']);
-    Route::delete('/student-portfolios/{studentPortfolio}', [StudentPortfolioController::class, 'destroy']);
+Route::prefix('/student-portfolios')->group(function () {
+    Route::scopeBindings()->group(function () {
+        Route::get('/{studentPortfolio}', [StudentPortfolioController::class, 'show']);
+        Route::put('/{studentPortfolio}', [StudentPortfolioController::class, 'update']);
+        Route::delete('/{studentPortfolio}', [StudentPortfolioController::class, 'destroy']);
+    });
+
+    Route::get('/{studentPortfolio}/portfolio-roles', [PortfolioRoleController::class, 'index']);
+    Route::post('/{studentPortfolio}/portfolio-roles', [PortfolioRoleController::class, 'store']);
+
+    Route::scopeBindings()->group(function() {
+        Route::delete('/{studentPortfolio}/portfolio-roles/{portfolioRole}', [PortfolioRoleController::class, 'destroy']);
+    });
+
+    Route::put('/{studentPortfolio}/archive', [StudentPortfolioController::class, 'archive']);
+    Route::put('/{studentPortfolio}/unarchive', [StudentPortfolioController::class, 'unarchive']);
+
 });
 
-
-//Portfolio Role Routes
-
-Route::get('/student-portfolios/{studentPortfolio}/portfolio-roles', [PortfolioRoleController::class, 'index']);
-Route::post('/student-portfolios/{studentPortfolio}/portfolio-roles', [PortfolioRoleController::class, 'store']);
-
-Route::scopeBindings()->group(function() {
-    Route::delete('/student-portfolios/{studentPortfolio}/portfolio-roles/{portfolioRole}', [PortfolioRoleController::class, 'destroy']);
-});
-
-
-//Student Project Routes
+/* ---Student Project Routes--- */
 
 Route::get('/student-projects', [StudentProjectController::class, 'index']);
 Route::post('/student-projects', [StudentProjectController::class, 'store']);
 
-Route::scopeBindings()->group(function () {
-    Route::get('/student-projects/{studentProject}', [StudentProjectController::class, 'show']);
-    Route::put('/student-projects/{studentProject}', [StudentProjectController::class, 'update']);
-    Route::delete('/student-projects/{studentProject}', [StudentProjectController::class, 'destroy']);
+Route::prefix('/student-projects')->group(function () {
+    Route::scopeBindings()->group(function () {
+        Route::get('/{studentProject}', [StudentProjectController::class, 'show']);
+        Route::put('/{studentProject}', [StudentProjectController::class, 'update']);
+        Route::delete('/{studentProject}', [StudentProjectController::class, 'destroy']);
+    });
+
+    Route::get('/{studentProject}/student-project-examples', [StudentProjectExampleController::class, 'index']);
+    Route::post('/{studentProject}/student-project-examples', [StudentProjectExampleController::class, 'store']);
+
+    Route::scopeBindings()->group(function () {
+        Route::delete('/{studentProject}/student-project-examples/{studentProjectExample}', [StudentProjectExampleController::class, 'destroy']);
+    });
+
+    Route::put('/{studentProject}/archive', [StudentProjectController::class, 'archive']);
+    Route::put('/{studentProject}/unarchive', [StudentProjectController::class, 'unarchive']);
 });
 
-//Student Project Example Routes 
 
-Route::get('/student-projects/{studentProject}/student-project-examples', [StudentProjectExampleController::class, 'index']);
-Route::post('/student-projects/{studentProject}/student-project-examples', [StudentProjectExampleController::class, 'store']);
 
-Route::scopeBindings()->group(function () {
-    Route::delete('/student-projects/{studentProject}/student-project-examples/{studentProjectExample}', [StudentProjectExampleController::class, 'destroy']);
-});
-
-//Archive Routes
-Route::put('/student-portfolios/{studentPortfolio}/archive', [StudentPortfolioController::class, 'archive']);
-Route::put('/student-portfolios/{studentPortfolio}/unarchive', [StudentPortfolioController::class, 'unarchive']);
-
-Route::put('/student-projects/{studentProject}/archive', [StudentProjectController::class, 'archive']);
-Route::put('/student-projects/{studentProject}/unarchive', [StudentProjectController::class, 'unarchive']);
