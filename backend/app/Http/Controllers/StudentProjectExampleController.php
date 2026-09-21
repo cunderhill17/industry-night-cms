@@ -22,6 +22,7 @@ class StudentProjectExampleController extends Controller
             'project_type'  => 'required|string',
             'video_url'     => 'nullable|mimes:mp4,mov,avi,webm|max:512000',
             'image_url'     => 'nullable|image|max:4096',
+            'image_alt'     => 'nullable|string',
         ]);
 
         if ($request->hasFile('video_url')) {

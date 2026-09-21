@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('project_type');
             $table->string('video_url')->nullable();
             $table->string('image_url')->nullable();
+            $table->string('image_alt')->nullable();
             $table->timestamps();
         });
     }

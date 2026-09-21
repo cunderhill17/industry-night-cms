@@ -13,6 +13,7 @@ class StudentPortfolio extends Model
         'student_name',
         'portfolio_url',
         'student_image',
+        'image_alt',
         'archived'
     ];
 
