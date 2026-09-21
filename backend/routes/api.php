@@ -49,16 +49,9 @@ Route::scopeBindings()->group(function () {
     Route::delete('/student-projects/{studentProject}/student-project-examples/{studentProjectExample}', [StudentProjectExampleController::class, 'destroy']);
 });
 
-
-//Student Portfolios Pagination
-Route::get('/paginate/student-portfolios', [StudentPortfolioController::class, 'portfolioPaginate']);
-
 //Archive Routes
 Route::put('/student-portfolios/{studentPortfolio}/archive', [StudentPortfolioController::class, 'archive']);
 Route::put('/student-portfolios/{studentPortfolio}/unarchive', [StudentPortfolioController::class, 'unarchive']);
 
 Route::put('/student-projects/{studentProject}/archive', [StudentProjectController::class, 'archive']);
 Route::put('/student-projects/{studentProject}/unarchive', [StudentProjectController::class, 'unarchive']);
-
-//Filtering 
-Route::get('/student-portfolios/filter/{roleString}', [PublicApiController::class, 'filterPortfolio']);
