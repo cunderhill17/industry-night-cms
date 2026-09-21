@@ -27,6 +27,7 @@ class StudentPortfolioController extends Controller
             'student_name' => 'required|string',
             'portfolio_url' => 'required|string',
             'student_image' => 'nullable|image|max:4096',
+            'image_alt' => 'nullable|string',
             'archived' => 'nullable|boolean',
         ]);
 
@@ -45,6 +46,7 @@ class StudentPortfolioController extends Controller
             'student_name' => 'required|string',
             'portfolio_url' => 'required|string',
             'student_image' => 'nullable|image|max:4096',
+            'image_alt' => 'nullable|string',
             'archived' => 'nullable|boolean',
         ]);
     

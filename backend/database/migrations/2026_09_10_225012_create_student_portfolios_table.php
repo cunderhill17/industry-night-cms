@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('student_name');
             $table->string('portfolio_url');
             $table->string('student_image')->nullable();
+            $table->string('image_alt')->nullable();
             $table->boolean('archived')->default(false);
             $table->timestamps();
         });

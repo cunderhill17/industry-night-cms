@@ -10,6 +10,7 @@ class StudentProjectExample extends Model
         'project_type',
         'video_url',
         'image_url',
+        'image_alt',
     ];
 
     public function studentProject()
