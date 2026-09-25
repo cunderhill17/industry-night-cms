@@ -3,6 +3,8 @@ import { NavLink } from "react-router-dom";
 export default function Header() {
     return (
         <header className="col-span-full md:col-span-3 lg:col-span-3">
+            <h1>IMD CMS <br/> <span>FACULTY BACKEND</span></h1>
+
             <nav>
                 <ul>
                     <li>
