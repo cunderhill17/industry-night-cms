@@ -5,9 +5,9 @@ import Header from './components/Header';
 
 function AppLayout() {
     return (
-        <div>
+        <div className='grid-con'>
             <Header/>
-            <main>
+            <main className='col-span-full md:col-span-5 lg:col-span-9'>
                 <Outlet/>
             </main>                
         </div>
