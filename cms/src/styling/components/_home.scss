@@ -111,6 +111,12 @@
                 font-weight: lighter;
                 text-align: left;
             }
+
+            &:hover, &:focus {
+                background-color: #111827;
+                color: #ffffff;
+                border: 1px solid White;
+            }
         }
     }
 }

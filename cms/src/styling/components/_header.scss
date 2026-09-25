@@ -57,6 +57,12 @@ nav {
                 padding: 10px 15px;
                 border: 1px solid white;
                 border-radius: 5px;
+
+                &:hover, &:focus {
+                    background-color: white;
+                    color: #111827;
+                    border: 1px solid #111827;
+                }
             }
         }
 
