@@ -1,0 +1,80 @@
+header {
+    max-width: 100%;
+    height: fit-content;
+    order: 2;
+    background-color: #111827;
+
+    @media screen and (min-width: 768px) {
+        order: 0;
+        padding-left: 25px;
+        top: 0;
+        bottom: 0;
+        min-height: 100vh;
+    }
+
+    h1 {
+        position: absolute !important; 
+        width: 1px !important; 
+        height: 1px !important; 
+        padding: 0 !important; 
+        margin: -1px !important; 
+        overflow: hidden !important; 
+        clip-path: inset(50%); 
+        white-space: nowrap !important; 
+        border: 0 !important; 
+
+        @media screen and (min-width: 768px) {
+            position: static !important;
+            width: 100% !important;
+            height: auto !important;
+            padding: 10px 0px !important;
+            clip-path: none;
+            color: white;
+
+            font-size: 24px;
+
+            span {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+nav {
+    padding: 25px 0px;
+    margin: 0px auto;
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+
+        li {
+            a {
+                background-color: rgb(45, 44, 44);
+                color: white;
+                padding: 10px 15px;
+                border: 1px solid white;
+                border-radius: 5px;
+
+                &:hover, &:focus {
+                    background-color: white;
+                    color: #111827;
+                    border: 1px solid #111827;
+                }
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            flex-direction: column;
+            justify-content: normal;
+            align-items: normal;
+            gap: 45px;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        margin: 0px;
+    }
+}
