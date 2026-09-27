@@ -1,0 +1,33 @@
+.title-banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    width: 100%;
+    padding: 10px;
+
+    h2 {
+        width: 412px;
+        margin: 10px auto;
+        font-weight: bold;
+    }
+
+    h3 {
+        width: 412px;
+        margin: 0px auto;
+        font-weight: 100;
+        font-size: 16px;
+    }
+
+    @media screen and (min-width: 768px) {
+        position: static;
+
+        h2 {
+            margin: 10px;
+        }
+
+        h3 {
+            margin: 10px;
+        }
+    }
+}
