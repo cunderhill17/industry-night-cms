@@ -1,0 +1,141 @@
+.portfoliospage {
+    padding-top: 100px;
+
+    @media screen and (min-width: 768px) {
+        padding-top: 15px;
+    }
+}
+
+.search-con {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    label {
+        width: 100%;
+
+        input {
+            width: 100%;
+            height: 100%;
+            padding: 10px 15px;
+            border: 1px solid black;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    }
+
+    button {
+        width: fit-content;
+        padding: 10px 15px;
+        border: 1px solid black;
+        border-radius: 5px;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+
+        label {
+            input {
+                padding: 5px 15px;
+            }
+        }
+
+        button {
+            padding: 5px 15px;
+        }
+    }
+}
+
+.filter-con {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+
+    button {
+        padding: 10px 15px;
+        border: 1px solid rgb(32, 32, 32);
+        border-radius: 3px;
+        background-color: rgb(32, 32, 32);
+        color: white;
+        cursor: pointer;
+
+        &:hover, &:focus {
+            background-color: white;
+            color: rgb(32, 32, 32);
+        }
+    }
+}
+
+.portfolio-con {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+    .student-portfolio {
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        border: 2px solid grey;
+        border-radius: 5px;
+
+        .img-placeholder {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            border: 2px dashed grey;
+
+            p {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 80%;
+                aspect-ratio: 1/1;
+                border-radius: 5px;
+                background-color: grey;
+                font-size: 12px;
+            }
+        }
+
+        .portfolio-details {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            h5 {
+                font-size: 16px;
+                font-weight: 100;
+                color: rgb(58, 58, 58);
+            }
+
+            span {
+                font-size: 16px;
+                font-weight: 100;
+                color: rgb(58, 58, 58);
+            }
+        }
+
+        button {
+            margin-left: auto;
+            padding: 5px 10px;
+            height: fit-content;
+            border: 1px solid rgb(58, 58, 58);
+            border-radius: 5px;
+            background-color: transparent;
+            color: rgb(58, 58, 58);
+            cursor: pointer;
+
+            &:hover, &:focus {
+                background-color: rgb(58, 58, 58);
+                color: white;
+            }
+        }
+    }
+}
