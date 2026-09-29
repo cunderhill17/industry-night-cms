@@ -11,10 +11,10 @@ export default function Header() {
                         <NavLink to="/">Home</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/">Portfolios</NavLink>
+                        <NavLink to="/portfolios">Portfolios</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/">Projects</NavLink>
+                        <NavLink to="/projects">Projects</NavLink>
                     </li>
                     <li>
                         <NavLink to="/">Settings</NavLink>

@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom'
 import Home from './components/Home';
 import Header from './components/Header';
 import Portfolios from './components/Portfolios';
+import Projects from './components/Projects';
 
 function AppLayout() {
     return (
@@ -22,7 +23,8 @@ const router = createBrowserRouter([
 
         children: [
             { path: '/',                element: <Home /> },
-            { path: '/portfolios',      element: <Portfolios/>}
+            { path: '/portfolios',      element: <Portfolios/>},
+            { path: '/projects',        element: <Projects />}
         ]
     }
 ])
