@@ -4,7 +4,7 @@ export default function CreatePortfolio() {
     return (
         <section className="creationpage">
             <div className="title-banner">
-                <NavLink className="backlink" to="/">&larr; Back</NavLink>
+                <NavLink className="backlink" to="/portfolios">&larr; Back</NavLink>
                 <h2>CREATE PORTFOLIO</h2>
                 <h3>STUDENT PORTFOLIO ENTRY</h3>
             </div>
