@@ -25,12 +25,14 @@
         }
     }
 
-    button {
+    a {
         width: fit-content;
+        text-align: center;
         padding: 10px 15px;
         border: 1px solid rgb(32, 32, 32);
         border-radius: 5px;
         background-color: transparent;
+        color: rgb(32, 32, 32);
         cursor: pointer;
 
         &:hover, &:focus {

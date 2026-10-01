@@ -1,3 +1,5 @@
+import { NavLink } from 'react-router-dom';
+
 export default function Portfolios() {
     return (
         <section className="portfoliospage">
@@ -11,7 +13,7 @@ export default function Portfolios() {
                     <span className="visually-hidden">Search Portfolios</span>
                     <input type="search" placeholder="Search students, roles, websites..." name="searchPortfolios"/>
                 </label>
-                <button>Add Portfolio</button>
+                <NavLink to="/create-portfolio">Add Portfolio</NavLink>
             </div>
             
             <section className="filter-con">

@@ -4,6 +4,7 @@ import Home from './components/Home';
 import Header from './components/Header';
 import Portfolios from './components/Portfolios';
 import Projects from './components/Projects';
+import CreatePortfolio from './components/CreatePortfolio';
 
 function AppLayout() {
     return (
@@ -24,7 +25,8 @@ const router = createBrowserRouter([
         children: [
             { path: '/',                element: <Home /> },
             { path: '/portfolios',      element: <Portfolios/>},
-            { path: '/projects',        element: <Projects />}
+            { path: '/projects',        element: <Projects />},
+            { path: '/create-portfolio',  element: <CreatePortfolio/>} 
         ]
     }
 ])
