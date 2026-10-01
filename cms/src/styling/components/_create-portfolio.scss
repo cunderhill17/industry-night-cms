@@ -29,6 +29,13 @@
             border: 1px solid black;
             border-radius: 8px;
         }
+
+        textarea {
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 8px;
+            min-height: 200px;
+        }
     }
 
     .btn-con {
