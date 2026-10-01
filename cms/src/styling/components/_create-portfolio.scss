@@ -1,13 +1,7 @@
 .creationpage {
-    padding-top: 100px;
-
     display: flex;
     flex-direction: column;
     gap: 15px;
-
-    @media screen and (min-width: 768px) {
-        padding-top: 15px;
-    }
 
     .backlink {
         width: 412px;

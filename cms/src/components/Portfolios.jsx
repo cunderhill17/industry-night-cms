@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 
 export default function Portfolios() {
     return (
-        <section className="portfoliospage">
+        <section className="portfoliospage top-mob-margin-sm">
             <div className="title-banner">
                 <h2>PORTFOLIO DIRECTORY</h2>
                 <h3>STUDENT PORTFOLIO ENTRIES</h3>

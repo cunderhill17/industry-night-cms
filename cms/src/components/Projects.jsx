@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom"
 
 export default function Projects() {
     return (
-        <section className="portfoliospage">
+        <section className="portfoliospage top-mob-margin-sm">
             <div className="title-banner">
                 <h2>PROJECTS</h2>
                 <h3>PROGRAM PROJECTS</h3>

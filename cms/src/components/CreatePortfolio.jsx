@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 
 export default function CreatePortfolio() {
     return (
-        <section className="creationpage">
+        <section className="creationpage top-mob-margin-md">
             <div className="title-banner">
                 <NavLink className="backlink" to="/portfolios">&larr; Back</NavLink>
                 <h2>CREATE PORTFOLIO</h2>

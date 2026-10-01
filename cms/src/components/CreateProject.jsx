@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 
 export default function CreateProject() {
     return (
-        <section className="creationpage">
+        <section className="creationpage top-mob-margin-md">
             <div className="title-banner">
                 <NavLink className="backlink" to="/projects">&larr; Back</NavLink>
                 <h2>CREATE PROJECT</h2>
