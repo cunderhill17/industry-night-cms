@@ -1,6 +1,8 @@
+import { NavLink } from "react-router-dom"
+
 export default function Projects() {
     return (
-        <section className="portfoliospage">
+        <section className="portfoliospage top-mob-margin-sm">
             <div className="title-banner">
                 <h2>PROJECTS</h2>
                 <h3>PROGRAM PROJECTS</h3>
@@ -11,7 +13,7 @@ export default function Projects() {
                     <span className="visually-hidden">Search Portfolios</span>
                     <input type="search" placeholder="Search projects, courses, semesters..." name="searchPortfolios"/>
                 </label>
-                <button>Add Project</button>
+                <NavLink to="/create-project">Add Project</NavLink>
             </div>
             
             <section className="filter-con">

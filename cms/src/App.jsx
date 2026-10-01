@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Portfolios from './components/Portfolios';
 import Projects from './components/Projects';
 import CreatePortfolio from './components/CreatePortfolio';
+import CreateProject from './components/CreateProject';
 
 function AppLayout() {
     return (
@@ -23,10 +24,11 @@ const router = createBrowserRouter([
         element: <AppLayout />,
 
         children: [
-            { path: '/',                element: <Home /> },
-            { path: '/portfolios',      element: <Portfolios/>},
-            { path: '/projects',        element: <Projects />},
-            { path: '/create-portfolio',  element: <CreatePortfolio/>} 
+            { path: '/',                    element: <Home /> },
+            { path: '/portfolios',          element: <Portfolios/>},
+            { path: '/projects',            element: <Projects />},
+            { path: '/create-portfolio',    element: <CreatePortfolio/>}, 
+            { path: '/create-project',      element: <CreateProject/>}
         ]
     }
 ])

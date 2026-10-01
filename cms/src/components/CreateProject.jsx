@@ -1,31 +1,36 @@
 import { NavLink } from 'react-router-dom';
 
-export default function CreatePortfolio() {
+export default function CreateProject() {
     return (
         <section className="creationpage top-mob-margin-md">
             <div className="title-banner">
-                <NavLink className="backlink" to="/portfolios">&larr; Back</NavLink>
-                <h2>CREATE PORTFOLIO</h2>
-                <h3>STUDENT PORTFOLIO ENTRY</h3>
+                <NavLink className="backlink" to="/projects">&larr; Back</NavLink>
+                <h2>CREATE PROJECT</h2>
+                <h3>STUDENT PROJECT ENTRY</h3>
             </div>
 
             <label>
-                <span>Name</span>
+                <span>Project Name</span>
                 <input type="text" />
             </label>
 
             <label>
-                <span>Role</span>
+                <span>Course</span>
                 <input type="text" />
             </label>
 
             <label>
-                <span>Website URL</span>
+                <span>Semester</span>
                 <input type="text" />
             </label>
 
             <label>
-                <span>Profile Image</span>
+                <span>Description</span>
+                <textarea type="text" />
+            </label>
+
+            <label>
+                <span>Image</span>
                 <input type="file" />
             </label>
 
