@@ -1,4 +1,8 @@
 import { NavLink } from "react-router-dom";
+import EditIcon from "./IconComponents/EditIcon";
+import HomeIcon from "./IconComponents/HomeIcon";
+import PeopleIcon from "./IconComponents/PeopleIcon";
+import SettingsIcon from "./IconComponents/SettingsIcon";
 
 export default function Header() {
     return (
@@ -8,16 +12,28 @@ export default function Header() {
             <nav>
                 <ul>
                     <li>
-                        <NavLink to="/">Home</NavLink>
+                        <NavLink to="/">
+                            <HomeIcon className={`headerIcon`} />
+                            Home
+                        </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/portfolios">Portfolios</NavLink>
+                        <NavLink to="/portfolios">
+                            <PeopleIcon className={`headerIcon`} />
+                            Portfolios
+                        </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/projects">Projects</NavLink>
+                        <NavLink to="/projects">
+                            <EditIcon className={`headerIcon`} />
+                            Projects
+                        </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/">Settings</NavLink>
+                        <NavLink to="/">
+                            <SettingsIcon className={`headerIcon`} />
+                            Settings
+                        </NavLink>
                     </li>
                 </ul>
             </nav>
