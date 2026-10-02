@@ -52,16 +52,29 @@ nav {
 
         li {
             a {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
                 background-color: rgb(45, 44, 44);
                 color: white;
                 padding: 10px 15px;
                 border: 1px solid white;
                 border-radius: 5px;
 
+                .headerIcon {
+                    stroke: #ffffff; 
+                }
+
                 &:hover, &:focus {
                     background-color: white;
                     color: #111827;
                     border: 1px solid #111827;
+
+                    .headerIcon {
+                        stroke: black;
+                    }
                 }
             }
         }
@@ -71,6 +84,12 @@ nav {
             justify-content: normal;
             align-items: normal;
             gap: 45px;
+
+            li {
+                a {
+                    margin-right: 15px;
+                }
+            }
         }
     }
 
@@ -78,3 +97,4 @@ nav {
         margin: 0px;
     }
 }
+
